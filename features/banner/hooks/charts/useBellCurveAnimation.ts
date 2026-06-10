@@ -7,8 +7,10 @@ import {
   useEffect,
   useRef,
 } from "react";
-import { AnimatedChartState } from "../../components/FacialAnalysis/charts/BellCurve/BellCurve.types";
-import { Y_DOMAIN } from "../../components/FacialAnalysis/charts/BellCurve/BellCurve.const";
+import {
+  AnimatedChartState,
+  Y_DOMAIN,
+} from "../../components/FacialAnalysis/charts/BellCurve";
 import { getRandom } from "@/features/global/utils/getRandom";
 
 export const useBellCurveAnimation = ({

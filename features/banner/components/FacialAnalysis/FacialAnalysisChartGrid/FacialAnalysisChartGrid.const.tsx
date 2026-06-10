@@ -1,8 +1,8 @@
-import { BarChartProps } from "../charts/BarChart/BarChart.types";
-import { ScatterProps } from "../charts/ScatterChart/ScatterChart.types";
-import { HighlightText } from "@/components/ui/⁠HighlightText/⁠HighlightText";
-import { SymmetryChartProps } from "../charts/SymmetryChart/SymmetryChart.types";
-import { ThirdSegment } from "../charts/FacialThirdsChart/FacialThirdsChart.types";
+import { BarChartProps } from "../charts/BarChart";
+import { ScatterProps } from "../charts/ScatterChart";
+import { HighlightText } from "@/components/ui/HighlightText";
+import { SymmetryChartProps } from "../charts/SymmetryChart";
+import { ThirdSegment } from "../charts/FacialThirdsChart";
 
 export const bellCurveTickLabel: Record<number, string> = {
   [-3]: "LOW DENSITY",

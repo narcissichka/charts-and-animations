@@ -7,7 +7,7 @@ import {
   useRef,
 } from "react";
 import { getRandomInt } from "@/features/global/utils/getRandom";
-import { SymmetryChartProps } from "@/features/banner/components/FacialAnalysis/charts/SymmetryChart/SymmetryChart.types";
+import { SymmetryChartProps } from "@/features/banner/components/FacialAnalysis/charts/SymmetryChart";
 
 type Marker = SymmetryChartProps["markers"][number];
 type AnimatedMarkerValues = Record<number, number>;

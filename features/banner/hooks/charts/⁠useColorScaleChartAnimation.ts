@@ -1,11 +1,10 @@
 import gsap from "gsap";
 import { getRandomInt } from "@/features/global/utils/getRandom";
+import { useCallback, useEffect, useRef } from "react";
 import {
-  useCallback,
-  useEffect,
-  useRef,
-} from "react";
-import { ColorScaleAnimationState, UseColorScaleChartAnimationParams } from "../../components/FacialAnalysis/charts/ColorScaleChart/ColorScaleChart.types";
+  ColorScaleAnimationState,
+  UseColorScaleChartAnimationParams,
+} from "../../components/FacialAnalysis/charts/ColorScaleChart";
 
 const SAMPLE_PRESETS: ColorScaleAnimationState[] = [
   { value: 8, label: "Light", swatchColor: "#91AEC4" },

@@ -1,6 +1,6 @@
-import { ParallaxScroll } from "@/features/animations/components/ParallaxScroll/ParallaxScroll";
+import { ParallaxScroll } from "@/features/animations/components/ParallaxScroll";
 import { Heading } from "./Heading/Heading";
-import { ResponsiveImage } from "@/components/ui/ResponsiveImage/ResponsiveImage";
+import { ResponsiveImage } from "@/components/ui/ResponsiveImage";
 
 import styles from "./FacialAnalysis.module.scss";
 import { FacialAnalysisChartGrid } from "./FacialAnalysisChartGrid/FacialAnalysisChartGrid";

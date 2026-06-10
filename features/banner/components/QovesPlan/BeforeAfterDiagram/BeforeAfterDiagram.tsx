@@ -1,7 +1,7 @@
 "use client";
 
-import { ImageCard } from "@/components/ui/ImageCard/ImageCard";
-import { SurroundingBorderTail } from "@/features/animations/components/SurroundingBorderTail/SurroundingBorderTail";
+import { ImageCard } from "@/components/ui/ImageCard";
+import { SurroundingBorderTail } from "@/features/animations/components/SurroundingBorderTail";
 import styles from "./BeforeAfterDiagram.module.scss";
 
 export const BeforeAfterDiagram = () => {

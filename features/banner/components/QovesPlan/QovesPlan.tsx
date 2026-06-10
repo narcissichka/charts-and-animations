@@ -1,8 +1,8 @@
-import { GridBanner } from "@/components/ui/GridBanner/GridBanner";
+import { GridBanner } from "@/components/ui/GridBanner";
 import { Heading } from "./Heading/Heading";
-import { BeforeAfterDiagram } from "@/features/banner/components/QovesPlan/BeforeAfterDiagram/BeforeAfterDiagram";
+import { BeforeAfterDiagram } from "@/features/banner/components/QovesPlan/BeforeAfterDiagram";
 import { List } from "./List/List";
-import { Spacer } from "@/components/ui/Spacer/Spacer";
+import { Spacer } from "@/components/ui/Spacer";
 import styles from "./QovesPlan.module.scss";
 
 export const QovesPlan = () => {

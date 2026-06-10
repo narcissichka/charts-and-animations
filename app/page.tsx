@@ -1,7 +1,7 @@
-import { Spacer } from "@/components/ui/Spacer/Spacer";
-import { FacialAnalysis } from "@/features/banner/components/FacialAnalysis/FacialAnalysis";
-import { QovesPlan } from "@/features/banner/components/QovesPlan/QovesPlan";
-import { DesktopOnly } from "@/features/functional/components/DesktopOnly/DesktopOnly";
+import { Spacer } from "@/components/ui/Spacer";
+import { FacialAnalysis } from "@/features/banner/components/FacialAnalysis";
+import { QovesPlan } from "@/features/banner/components/QovesPlan";
+import { DesktopOnly } from "@/features/functional/components/DesktopOnly";
 
 export default function Home() {
   return (
@@ -10,7 +10,7 @@ export default function Home() {
         <QovesPlan />
       </DesktopOnly>
       <FacialAnalysis />
-      <Spacer className="fullHeight"/>
+      <Spacer className="fullHeight" />
     </main>
   );
 }

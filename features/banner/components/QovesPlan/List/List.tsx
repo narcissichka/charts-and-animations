@@ -1,11 +1,7 @@
-import { InfoList } from "@/components/ui/InfoList/InfoList";
-import { InfoCardSize } from "@/components/ui/InfoList/InfoCard/InfoCard.types";
-import { Title } from "@/components/ui/Title/Title";
-import {
-  TitlePosition,
-  TitleSize,
-  TitleTag,
-} from "@/components/ui/Title/Title.types";
+import { InfoList } from "@/components/ui/InfoList";
+import { InfoCardSize } from "@/components/ui/InfoList/InfoCard";
+import { Title } from "@/components/ui/Title";
+import { TitlePosition, TitleSize, TitleTag } from "@/components/ui/Title";
 import styles from "./List.module.scss";
 
 const ListTitle = ({ title }: { title: string }) => {
@@ -33,7 +29,9 @@ export const qovesPlanListItems = [
   },
   {
     id: "qoves-plan-4",
-    child: <ListTitle title={"Track your progress and see\ndramatic results"} />,
+    child: (
+      <ListTitle title={"Track your progress and see\ndramatic results"} />
+    ),
   },
 ];
 

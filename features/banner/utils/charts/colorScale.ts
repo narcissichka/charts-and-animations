@@ -1,4 +1,7 @@
-import { ColorStop, ScaleAnnotation } from "../../components/FacialAnalysis/charts/ColorScaleChart/ColorScaleChart.types";
+import {
+  ColorStop,
+  ScaleAnnotation,
+} from "../../components/FacialAnalysis/charts/ColorScaleChart";
 
 interface GetValueYParams {
   value: number;

@@ -3,8 +3,8 @@ import {
   DOTS_NUMBER_DEFAULT,
   GAUSSIAN_MU,
   GAUSSIAN_SIGMA,
-} from "../../components/FacialAnalysis/charts/BellCurve/BellCurve.const";
-import { TickLabel } from "../../components/FacialAnalysis/charts/BellCurve/BellCurve.types";
+  TickLabel,
+} from "../../components/FacialAnalysis/charts/BellCurve";
 
 export const gaussian = (x: number, mu = GAUSSIAN_MU, s = GAUSSIAN_SIGMA) =>
   Math.exp(-((x - mu) ** 2) / (2 * s * s));

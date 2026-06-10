@@ -2,7 +2,7 @@ import { ChartOffsetInternal } from "recharts/types/util/types";
 import {
   GetAxisTickLabelsParams,
   GetChipLayoutParams,
-} from "../../components/FacialAnalysis/charts/SymmetryChart/SymmetryChart.types";
+} from "../../components/FacialAnalysis/charts/SymmetryChart";
 
 function estimateTextWidth(text: string, fontSize: number) {
   return text.length * fontSize * 0.78;

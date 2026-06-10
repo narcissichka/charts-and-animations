@@ -1,4 +1,4 @@
-import { ThirdSegment } from "../../components/FacialAnalysis/charts/FacialThirdsChart/FacialThirdsChart.types";
+import { ThirdSegment } from "../../components/FacialAnalysis/charts/FacialThirdsChart";
 
 /**
  * Recharts stacked horizontal bar uses one row of data where every

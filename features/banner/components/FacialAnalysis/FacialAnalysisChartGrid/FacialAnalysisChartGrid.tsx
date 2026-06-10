@@ -15,7 +15,7 @@ import {
   symmetryChartMarkers,
 } from "./FacialAnalysisChartGrid.const";
 import styles from "./FacialAnalysisChartGrid.module.scss";
-import { Spacer } from "@/components/ui/Spacer/Spacer";
+import { Spacer } from "@/components/ui/Spacer";
 
 const ScatterChartMatrix = dynamic(
   () => import("../charts/ScatterChart/ScatterChart"),

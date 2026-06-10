@@ -1,7 +1,7 @@
 import {
   ScatterPoint,
   ScatterProps,
-} from "../../components/FacialAnalysis/charts/ScatterChart/ScatterChart.types";
+} from "../../components/FacialAnalysis/charts/ScatterChart";
 
 export function getDomain(size: number, centerGapUnits: number) {
   return [-0.5, size - 0.5 + centerGapUnits] as const;

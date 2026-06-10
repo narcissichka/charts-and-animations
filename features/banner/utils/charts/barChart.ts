@@ -1,4 +1,4 @@
-import { ViewBox } from "../../components/FacialAnalysis/charts/BarChart/BarChart.types";
+import { ViewBox } from "../../components/FacialAnalysis/charts/BarChart";
 
 interface GetMarkerLayoutParams {
   viewBox: ViewBox;

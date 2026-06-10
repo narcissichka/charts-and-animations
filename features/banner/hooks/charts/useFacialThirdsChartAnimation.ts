@@ -6,7 +6,7 @@ import {
   useEffect,
   useRef,
 } from "react";
-import { ThirdSegment } from "@/features/banner/components/FacialAnalysis/charts/FacialThirdsChart/FacialThirdsChart.types";
+import { ThirdSegment } from "@/features/banner/components/FacialAnalysis/charts/FacialThirdsChart";
 
 type SegmentValues = Record<string, number>;
 

@@ -1,6 +1,6 @@
-import { Badge } from "@/components/ui/Badge/Badge";
-import { Title } from "@/components/ui/Title/Title";
-import { HighlightText } from "@/components/ui/⁠HighlightText/⁠HighlightText";
+import { Badge } from "@/components/ui/Badge";
+import { Title } from "@/components/ui/Title";
+import { HighlightText } from "@/components/ui/HighlightText";
 
 export const Heading = () => {
   return (

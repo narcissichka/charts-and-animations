@@ -1,13 +1,9 @@
-import { Badge } from "@/components/ui/Badge/Badge";
-import { BadgeVariant } from "@/components/ui/Badge/Badge.types";
-import { Title } from "@/components/ui/Title/Title";
-import {
-  TitlePosition,
-  TitleSize,
-  TitleVariant,
-} from "@/components/ui/Title/Title.types";
-import { HighlightText } from "@/components/ui/⁠HighlightText/⁠HighlightText";
-import styles from "./Heading.module.scss"
+import { Badge } from "@/components/ui/Badge";
+import { BadgeVariant } from "@/components/ui/Badge";
+import { Title } from "@/components/ui/Title";
+import { TitlePosition, TitleSize, TitleVariant } from "@/components/ui/Title";
+import { HighlightText } from "@/components/ui/HighlightText";
+import styles from "./Heading.module.scss";
 
 export const Heading = () => {
   return (
