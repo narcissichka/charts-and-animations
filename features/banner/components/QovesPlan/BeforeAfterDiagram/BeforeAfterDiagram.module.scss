@@ -1,0 +1,11 @@
+@use "../../../../../styles/abstract/functions" as *;
+
+.wrapper {
+  padding: rem(16);
+}
+
+.imageCard {
+  background-color: var(--color-bg-secondary-hover);
+  border-radius: rem(8);
+  overflow: hidden;
+}

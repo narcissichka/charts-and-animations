@@ -1,0 +1,99 @@
+@use "../../../../../../styles/abstract/functions" as *;
+@use "../../../../../../styles/abstract/media" as *;
+@use "../../../../../../styles/base/typography" as typography;
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-top: 0 !important;
+}
+
+.header {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: rem(3);
+
+  @include respond-to(lg) {
+    top: rem(7);
+  }
+}
+
+.label {
+  font-family: typography.$font-mono;
+  font-size: rem(3);
+  line-height: rem(4);
+  letter-spacing: -0.5%;
+  text-transform: uppercase;
+  color: var(--color-text-disabled);
+
+  @include respond-to(md) {
+    font-size: rem(7);
+    line-height: rem(8);
+  }
+}
+
+.value {
+  font-family: typography.$font-primary;
+  font-size: rem(13);
+  line-height: rem(18);
+  letter-spacing: -1.5%;
+  color: var(--color-text-primary);
+
+  @include respond-to(md) {
+    font-size: rem(27);
+    line-height: rem(32);
+  }
+}
+
+/* chart fills the whole card; bar is pinned to the bottom by the custom shape */
+.plot {
+  flex: 1;
+  min-height: rem(60);
+  width: 100%;
+  min-width: rem(126);
+
+  @include respond-to(lg) {
+    min-height: rem(120);
+    min-width: rem(270);
+  }
+}
+
+/* svg paint props */
+.divider {
+  stroke: var(--color-primary-200);
+  stroke-dasharray: 4 4;
+}
+
+.cap {
+  fill: var(--color-primary-200);
+}
+
+.minW {
+  fill: var(--color-primary-100);
+}
+
+.track {
+  fill: var(--color-primary-300);
+}
+
+.fill {
+  fill: var(--color-primary-200);
+}
+
+.tick {
+  fill: var(--color-text-button-primary);
+  font-family: typography.$font-primary;
+  font-size: rem(3);
+  line-height: rem(4);
+
+  @include respond-to(md) {
+    font-size: rem(6);
+    line-height: rem(7);
+  }
+}
+
+.pill {
+  fill: var(--color-chart-pill-bg);
+}

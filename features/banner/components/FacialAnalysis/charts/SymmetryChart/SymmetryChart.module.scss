@@ -1,0 +1,57 @@
+@use "../../../../../../styles/abstract/functions" as *;
+@use "../../../../../../styles/abstract/media" as *;
+
+@use "../../../../../../styles/base/typography" as typography;
+
+.card {
+  @include respond-to(lg) {
+    width: 90%;
+  }
+}
+
+.plot {
+  flex: 1;
+  min-height: rem(87);
+  height: 100%;
+  width: 100%;
+  min-width: rem(120);
+
+  @include respond-to(lg) {
+    min-width: rem(266);
+    min-height: rem(120);
+  }
+}
+
+.chip {
+  fill: var(--color-bg-base);
+}
+
+.chipText,
+.axisLabel {
+  font-family: typography.$font-mono;
+  letter-spacing: -0.5%;
+  text-transform: uppercase;
+}
+
+.chipText {
+  fill: var(--color-chart-text);
+  font-size: rem(3);
+  line-height: rem(4);
+
+  @include respond-to(lg) {
+    font-size: rem(6);
+    line-height: rem(8);
+  }
+}
+
+.axisLabel {
+  fill: var(--color-text-button-primary);
+  opacity: 0.85;
+  font-size: rem(3);
+  line-height: rem(4);
+
+  @include respond-to(lg) {
+    font-size: rem(7);
+    line-height: rem(8);
+  }
+}

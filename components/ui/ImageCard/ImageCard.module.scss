@@ -1,0 +1,22 @@
+@use "../../../styles/abstract/functions" as *;
+@use "../../../styles/base/typography" as typography;
+
+.figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.caption {
+  color: var(--color-text-button-primary);
+  padding-block: rem(16);
+  font-family: typography.$font-mono;
+  font-weight: 400;
+  font-size: rem(16);
+  line-height: rem(18);
+  letter-spacing: -0.5%;
+}
+
+.image {
+    margin-top: calc(rem(16) * -1);
+}

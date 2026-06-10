@@ -1,0 +1,42 @@
+:root {
+  --color-text-button-secondary-disabled: #9aaeb5;
+  --color-text-button-primary-disabled: #f2f2f2;
+  --color-bg-base: #ffffff;
+  --color-border-base: #e8e8e880;
+  --color-bg-base-with-opacity: #ffffff1a;
+  --color-border-primary-muted: #f2f2f2;
+  --color-border-primary-muted-with-opacity: #c7d1d54d;
+
+  --color-text-disabled: #9aaeb5;
+  --color-text-secondary: #515255;
+  --color-text-primary: #233137;
+
+  --color-text-button-primary: #ffffff;
+
+  --color-before-after-diagram-line: #d7e5eb;
+  --color-before-after-diagram-dot: #869aa1;
+
+  --color-bg-secondary-hover: #aec2c9;
+  --color-bg-primary-hover: #ffffff33;
+
+  --color-primary-400: #9aaeb5;
+  --color-primary-200: #cddbe1;
+  --color-primary-300: #aec2c9;
+  --color-primary-100: #f2f5f5;
+  --color-primary-50: #f9fbfb;
+
+  --color-box-shadow: #0000004d;
+  --color-chart-bg: #0000001a;
+  --color-chart-marker-text: #515255;
+  --color-chart-caption-bg: #f2f5f533;
+  --color-chart-pill-bg: #ffffff26;
+  --color-chart-text: #233137;
+}
+
+.dark {
+  --color-border-primary-muted-with-opacity: #f2f2f21a;
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #ffffff;
+  --color-text-button-secondary-disabled: #ffffff;
+  --color-bg-base-with-opacity: transparent;
+}

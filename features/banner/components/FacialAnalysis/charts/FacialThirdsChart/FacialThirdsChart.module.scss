@@ -1,0 +1,49 @@
+@use "../../../../../../styles/abstract/functions" as *;
+@use "../../../../../../styles/abstract/media" as *;
+@use "../../../../../../styles/base/typography" as typography;
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.plot {
+  width: 100%;
+  height: rem(20);
+  min-width: rem(120);
+
+  @include respond-to(md) {
+    height: rem(36);
+    min-width: rem(338);
+  }
+}
+
+.header,
+.topLabel {
+  font-family: typography.$font-mono;
+  font-size: rem(3);
+  line-height: rem(4);
+  letter-spacing: -0.5%;
+  text-transform: uppercase;
+  color: var(--color-text-button-primary-disabled);
+  fill: var(--color-text-button-primary-disabled);
+
+  @include respond-to(md) {
+    font-size: rem(7);
+    line-height: rem(8);
+  }
+}
+
+.value {
+  fill: var(--color-text-button-primary);
+  font-family: typography.$font-primary;
+  font-size: rem(4);
+  line-height: rem(5);
+  font-weight: 500;
+
+  @include respond-to(md) {
+    font-size: rem(8);
+    line-height: rem(10);
+  }
+}

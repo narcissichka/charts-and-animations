@@ -1,0 +1,87 @@
+@use "../../../../styles/abstract/functions" as *;
+
+$spacing-line-offset: rem(12);
+$spacing-dot-head-size: rem(5);
+$spacing-dot-tail-size: rem(1.35);
+
+.wrapper {
+  width: 100%;
+  padding: $spacing-line-offset;
+}
+
+.grid {
+  display: flex;
+  align-items: center;
+  gap: rem(12);
+
+  & > div {
+    flex-grow: 1;
+    min-height: rem(38);
+  }
+
+  & > div:first-child,
+  & > div:last-child {
+    flex: 0 0 33.57%;
+  }
+}
+
+.relative {
+  position: relative;
+}
+
+/* Invisible measurement anchors – they drive the responsive geometry,
+   the visible border is rendered by the SVG path below. */
+.line {
+  position: absolute;
+  pointer-events: none;
+}
+
+:global(.flow-border) {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  overflow: visible;
+}
+
+:global(.flow-border__path) {
+  fill: none;
+  stroke: var(--color-before-after-diagram-line);
+  stroke-width: 1;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+:global(.flow-train) {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 5;
+  // control the whole train here:
+  // opacity, mix-blend-mode, filter, color, etc.
+}
+
+:global(.flow-dot) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: var(--color-before-after-diagram-dot);
+  pointer-events: none;
+  will-change: transform, opacity;
+}
+
+:global(.flow-dot--tail) {
+  width: $spacing-dot-tail-size;
+  height: $spacing-dot-tail-size;
+  z-index: 1;
+  // center the smaller tail nodes with the head
+  top: calc(($spacing-dot-head-size / 2) - ($spacing-dot-tail-size / 2));
+  left: calc(($spacing-dot-head-size / 2) - ($spacing-dot-tail-size / 2));
+}
+
+:global(.flow-dot--head) {
+  border-radius: $spacing-dot-tail-size;
+  z-index: 2;
+  width: $spacing-dot-head-size;
+  height: $spacing-dot-head-size;
+}

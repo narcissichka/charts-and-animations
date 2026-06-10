@@ -1,0 +1,13 @@
+@use "../../../styles/abstract/functions" as *;
+@use "../../../styles/base/typography" as typography;
+
+.badge {
+    display: inline-block;
+    padding: rem(7) rem(10);
+    background-color: var(--color-bg-base-with-opacity);
+    border: 1px solid var(--color-border-primary-muted-with-opacity);
+    border-radius: rem(99);
+    color: var(--color-text-button-secondary-disabled);
+
+    @include typography.body-4-zagma-book;
+}

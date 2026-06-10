@@ -1,0 +1,15 @@
+@use "../../../styles/abstract/functions" as *;
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+}
+
+.gridItem {
+  padding: rem(16);
+
+  &:not(:last-of-type) {
+    border-right: 1px solid var(--color-border-primary-muted);
+  }
+}

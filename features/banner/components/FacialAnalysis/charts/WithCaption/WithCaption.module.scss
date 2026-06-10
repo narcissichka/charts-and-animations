@@ -1,0 +1,30 @@
+@use "../../../../../../styles/abstract/functions" as *;
+@use "../../../../../../styles/abstract/media" as *;
+
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
+.chart {
+  flex: 1;
+  min-height: 0; // lets ResponsiveContainer measure
+  width: 100%;
+}
+
+.caption {
+  margin: 0;
+  padding: rem(2) rem(3);
+  font-size: rem(4);
+  line-height: rem(6);
+  color: var(--color-primary-50);
+  background: var(--color-chart-caption-bg);
+  border-radius: rem(2);
+
+  @include respond-to(md) {
+    font-size: rem(9);
+    line-height: rem(13);
+    padding: rem(5) rem(7);
+    border-radius: rem(4);
+  }
+}

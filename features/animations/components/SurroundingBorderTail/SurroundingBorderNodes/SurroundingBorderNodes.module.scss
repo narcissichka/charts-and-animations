@@ -1,0 +1,103 @@
+@use "../../../../../styles/abstract/functions" as *;
+
+$spacing-line-offset: calc(rem(12) * -1);
+
+/* Invisible measurement anchors – they drive the responsive geometry,
+   the visible border is rendered by the SVG path below. */
+.line {
+  position: absolute;
+  pointer-events: none;
+}
+
+/* Before */
+:global(.beforeCard) {
+  .lineY1 {
+    width: 1px;
+    left: $spacing-line-offset;
+    top: $spacing-line-offset;
+    bottom: $spacing-line-offset;
+  }
+
+  .lineY2 {
+    width: 1px;
+    right: $spacing-line-offset;
+    top: $spacing-line-offset;
+    bottom: calc(50% + rem(31));
+  }
+
+  .lineY3 {
+    width: 1px;
+    right: $spacing-line-offset;
+    top: calc(50% + rem(31));
+    bottom: $spacing-line-offset;
+  }
+
+  .lineX1 {
+    height: 1px;
+    top: $spacing-line-offset;
+    left: $spacing-line-offset;
+    right: $spacing-line-offset;
+  }
+
+  .lineX2 {
+    height: 1px;
+    bottom: $spacing-line-offset;
+    left: $spacing-line-offset;
+    right: $spacing-line-offset;
+  }
+}
+
+/* Center */
+:global(.centralCard) {
+  .lineX1 {
+    height: 1px;
+    top: $spacing-line-offset;
+    left: 0;
+    right: 0;
+  }
+
+  .lineX2 {
+    height: 1px;
+    bottom: $spacing-line-offset;
+    left: 0;
+    right: 0;
+  }
+}
+
+/* After */
+:global(.afterCard) {
+  .lineY1 {
+    width: 1px;
+    right: $spacing-line-offset;
+    top: $spacing-line-offset;
+    bottom: $spacing-line-offset;
+  }
+
+  .lineY2 {
+    width: 1px;
+    left: $spacing-line-offset;
+    top: $spacing-line-offset;
+    bottom: calc(50% + rem(31));
+  }
+
+  .lineY3 {
+    width: 1px;
+    left: $spacing-line-offset;
+    top: calc(50% + rem(31));
+    bottom: $spacing-line-offset;
+  }
+
+  .lineX1 {
+    height: 1px;
+    top: $spacing-line-offset;
+    left: $spacing-line-offset;
+    right: $spacing-line-offset;
+  }
+
+  .lineX2 {
+    height: 1px;
+    bottom: $spacing-line-offset;
+    left: $spacing-line-offset;
+    right: $spacing-line-offset;
+  }
+}

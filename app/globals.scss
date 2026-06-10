@@ -1,0 +1,14 @@
+@use "../styles/base/fonts";
+@use "../styles/base/reset";
+@use "../styles/base/typography" as type;
+@use "../styles/base/variables";
+
+body {
+  background: var(--color-bg-base);
+  color: var(--color-text-primary);
+  @include type.body-2-book;
+}
+
+.fullHeight {
+  height: 100dvh;
+}

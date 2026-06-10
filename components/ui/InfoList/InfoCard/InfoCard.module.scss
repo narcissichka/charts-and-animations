@@ -1,0 +1,36 @@
+@use "../../../../styles/abstract/functions" as *;
+@use "../../../../styles/base/typography" as typography;
+
+.card {
+  padding: rem(16);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: rem(12);
+  border: 1px solid var(--color-border-primary-muted);
+
+  &.sm {
+    height: rem(152);
+  }
+
+  &.md {
+    height: rem(230);
+  }
+}
+
+.imageContainer {
+  width: rem(120);
+  height: rem(81);
+}
+
+.index {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: rem(24);
+  height: rem(24);
+  border-radius: rem(135);
+  background-color: var(--color-primary-400);
+  color: var(--color-text-button-primary);
+  @include typography.body-4-zagma-book;
+}

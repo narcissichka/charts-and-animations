@@ -1,0 +1,78 @@
+@use "../../../../../../styles/abstract/functions" as *;
+@use "../../../../../../styles/abstract/media" as *;
+@use "../../../../../../styles/base/typography" as typography;
+
+.card {
+  min-width: rem(132);
+  overflow: hidden;
+  position: relative;
+
+  @include respond-to(lg) {
+    min-width: rem(284);
+  }
+
+  :global(.caption) {
+    position: absolute;
+    bottom: rem(3);
+    right: rem(3);
+    left: rem(3);
+
+    @include respond-to(md) {
+      position: static;
+    }
+  }
+}
+
+.grid {
+  stroke: var(--color-chart-pill-bg);
+  stroke-width: 1;
+}
+
+.xAxis {
+  :global(.recharts-cartesian-axis-tick-value) {
+    fill: var(--color-bg-base);
+    opacity: 0.45;
+    font-size: rem(7);
+    letter-spacing: 0.5px;
+  }
+}
+
+.tailMarker {
+  stroke: var(--color-bg-base);
+  opacity: 0.35;
+  stroke-dasharray: 3 3;
+  stroke-width: 1;
+}
+
+.tailGradientStop {
+  stop-color: var(--color-bg-base);
+  stop-opacity: 0.4;
+}
+
+.curveLine {
+  stroke: var(--color-bg-base);
+  opacity: 0.8;
+  stroke-width: 1.25;
+}
+
+.squareMarker {
+  fill: var(--color-bg-base);
+  opacity: 0.55;
+}
+
+.axisLabel {
+  font-family: typography.$font-mono;
+  letter-spacing: -0.5%;
+  text-transform: uppercase;
+  fill: var(--color-text-button-primary);
+  opacity: 0.85;
+  font-size: rem(3);
+  line-height: rem(4);
+  margin-top: rem(2);
+
+  @include respond-to(md) {
+    font-size: rem(7);
+    line-height: rem(8);
+    margin-top: rem(4);
+  }
+}

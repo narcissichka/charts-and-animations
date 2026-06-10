@@ -1,0 +1,36 @@
+@use "../../../styles/base/typography" as typography;
+@use "../../../styles/abstract/functions" as *;
+
+.title {
+  display: flex;
+  flex-direction: column;
+  gap: rem(16);
+
+  &:global(.center) {
+    align-items: center;
+    text-align: center;
+  }
+
+  &:global(.sm) {
+    gap: rem(8);
+  }
+
+  .h4 {
+    color: var(--color-text-primary);
+    @include typography.heading-4-book;
+  }
+
+  .p {
+    @include typography.heading-8-book;
+  }
+}
+
+.subtitle {
+  color: var(--color-text-secondary);
+  max-width: rem(430);
+  @include typography.body-2-book;
+
+  :global(.dark) & {
+    opacity: 0.65;
+  }
+}

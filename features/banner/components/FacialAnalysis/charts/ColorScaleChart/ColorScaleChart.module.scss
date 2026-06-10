@@ -1,0 +1,76 @@
+@use "../../../../../../styles/abstract/functions" as *;
+@use "../../../../../../styles/abstract/media" as *;
+@use "../../../../../../styles/base/typography" as typography;
+
+.card {
+  min-width: rem(127);
+  padding-inline: 0 !important;
+
+  :global(.caption) {
+    margin-inline: rem(3);
+
+    @include respond-to(lg) {
+      margin-inline: rem(7);
+    }
+  }
+
+  @include respond-to(lg) {
+    min-width: rem(337);
+  }
+}
+
+.helperLine {
+  stroke: var(--color-border-base);
+  stroke-width: 1;
+  stroke-dasharray: 4 4;
+}
+
+.scaleBorder {
+  fill: none;
+  stroke: var(--color-border-base);
+  stroke-width: 1;
+  shape-rendering: geometricPrecision;
+  pointer-events: none;
+}
+
+.annotationLine {
+  stroke: var(--color-border-base);
+  stroke-width: 1;
+  shape-rendering: crispEdges;
+}
+
+.annotationText {
+  fill: var(--color-text-button-primary);
+  font-family: typography.$font-primary;
+  font-size: rem(6);
+  line-height: rem(8);
+  font-weight: 500;
+}
+
+.highlight {
+  fill: none;
+  stroke: var(--color-border-base);
+  stroke-width: 1;
+  pointer-events: none;
+}
+
+.highlightDiamond {
+  fill: var(--color-border-base);
+}
+
+.marker {
+  fill: var(--color-bg-base);
+}
+
+.markerText {
+  fill: var(--color-chart-marker-text);
+  font-family: typography.$font-mono;
+  font-size: rem(6);
+  line-height: rem(8);
+  letter-spacing: -0.5%;
+  text-transform: uppercase;
+}
+
+.swatch {
+  shape-rendering: crispEdges;
+}

@@ -1,0 +1,10 @@
+.highlight {
+  color: var(--color-text-disabled);
+  fill: var(--color-text-disabled);
+
+  :global(.dark) & {
+    color: var(--color-text-primary);
+    fill: var(--color-text-primary);
+    opacity: 0.65;
+  }
+}

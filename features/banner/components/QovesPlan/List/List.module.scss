@@ -1,0 +1,40 @@
+@use "../../../../../styles/abstract/functions" as *;
+
+$hover-transition-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+.title {
+  :global(.heading) {
+    white-space: pre-line;
+  }
+}
+
+.card {
+  transition:
+    background-color 0.1s $hover-transition-function,
+    background-image 0.3s $hover-transition-function,
+    box-shadow 0.2s $hover-transition-function;
+
+  :global(.heading) {
+    transition: color 0.2s $hover-transition-function;
+  }
+
+  :global(.index) {
+    transition: background-color 0.2s $hover-transition-function;
+  }
+
+  &:hover {
+    border-color: transparent;
+    box-shadow: 0 rem(20) rem(32) calc(rem(20) * -1) var(--color-box-shadow);
+    background-color: var(--color-primary-400);
+    background-image: url("/images/blur.png");
+    background-size: cover;
+
+    :global(.heading) {
+      color: var(--color-text-button-primary);
+    }
+
+    :global(.index) {
+      background-color: var(--color-bg-primary-hover);
+    }
+  }
+}

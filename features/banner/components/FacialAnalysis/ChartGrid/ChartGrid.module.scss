@@ -1,0 +1,24 @@
+@use "../../../../../styles/abstract/functions" as *;
+@use "../../../../../styles/abstract/media" as *;
+
+.grid {
+  display: grid;
+  width: 100%;
+  height: rem(322);
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: rem(7) 20%;
+  max-width: rem(1565);
+  margin: 0 auto;
+
+  @include respond-to(md) {
+    height: rem(691);
+  }
+
+  @include respond-to(lg) {
+    grid-template-columns: repeat(5, auto);
+    grid-template-rows: auto;
+    gap: rem(16);
+    height: rem(337);
+  }
+}

@@ -1,0 +1,10 @@
+@use "../../../../styles/abstract/functions" as *;
+@use "../../../../styles/abstract/media" as *;
+
+.img {
+  height: 65%;
+
+  @include respond-to(md) {
+    height: 85%;
+  }
+}
