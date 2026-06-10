@@ -8,9 +8,6 @@ export const BAR_CHART_MARGIN = {
   left: 0,
 };
 
-/** Match SCSS $lg breakpoint */
-export const LG_BREAKPOINT = "(min-width: 1024px)";
-
 export interface BarChartConfig {
   BAR_SIZE: number;
   CAP_HALF_WIDTH: number;

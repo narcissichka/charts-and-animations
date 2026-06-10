@@ -13,7 +13,6 @@ import {
   BAR_CHART_MARGIN,
   CHART_DATA_KEY,
   CHART_NAME,
-  LG_BREAKPOINT,
   getBarChartConfig,
 } from "./BarChart.const";
 import styles from "./BarChart.module.scss";
@@ -23,6 +22,7 @@ import { Marker } from "./Marker/Marker";
 import useMediaQuery from "@/features/functional/hooks/useMediaQuery";
 import { useBarChartAnimation } from "@/features/banner/hooks/charts/useBarChartAnimation";
 import { getFullWidth } from "@/features/banner/utils/charts/barChart";
+import { LG_BREAKPOINT } from "@/features/global/constants/breakpoints";
 
 export default function BarChartSmoothness({
   value,

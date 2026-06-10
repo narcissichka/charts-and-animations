@@ -64,9 +64,6 @@ export const CHART_MARGIN = {
   left: 0,
 };
 
-/** Match SCSS $lg breakpoint */
-export const LG_BREAKPOINT = "(min-width: 1024px)";
-
 export interface ScatterChartConfig {
   CELL_SIZE: number;
   GAP: number;

@@ -35,9 +35,6 @@ export const X_AXIS_PADDING = {
   right: 8,
 };
 
-/** Match SCSS $lg breakpoint */
-export const LG_BREAKPOINT = "(min-width: 1024px)";
-
 export interface BellCurveConfig {
   SQUARE_SIZE: number;
   GRID_X_LINES: number;

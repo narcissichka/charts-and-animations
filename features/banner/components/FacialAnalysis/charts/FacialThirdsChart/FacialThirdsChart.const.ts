@@ -12,9 +12,6 @@ export const DEFAULT_VALUE_FORMATTER = (v: number) => v.toFixed(2);
 
 export const CHART_MARGIN = { top: 0, right: 0, bottom: 0, left: 0 };
 
-/** Match SCSS $lg breakpoint */
-export const LG_BREAKPOINT = "(min-width: 1024px)";
-
 export interface FacialThirdsChartConfig {
   BAR_HEIGHT: number;
   BAR_RADIUS: number;

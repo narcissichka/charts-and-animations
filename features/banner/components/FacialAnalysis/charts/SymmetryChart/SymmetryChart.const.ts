@@ -28,9 +28,6 @@ export const DEFAULT_MARKERS: SymmetryChartProps["markers"] = [
   { value: 55, label: "Average", swatchColor: "#5D767E" },
 ];
 
-/** Match SCSS $lg breakpoint */
-export const LG_BREAKPOINT = "(min-width: 1024px)";
-
 export interface SymmetryChartConfig {
   GRID_COLUMNS: number;
   CHIP_HEIGHT: number;

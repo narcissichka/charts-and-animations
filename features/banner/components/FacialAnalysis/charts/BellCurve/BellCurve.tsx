@@ -13,13 +13,9 @@ import {
   YAxis,
 } from "recharts";
 import WithCaption from "../WithCaption/WithCaption";
-type AnimatedChartState = {
-  yDomain: number;
-  tailFrom: number;
-};
+import { LG_BREAKPOINT } from "@/features/global/constants/breakpoints";
 import {
   BELL_CURVE_MARGIN,
-  LG_BREAKPOINT,
   MARKERS,
   TAIL_FILL_ID,
   TAIL_FROM,
@@ -30,7 +26,7 @@ import {
   getBellCurveConfig,
 } from "./BellCurve.const";
 import styles from "./BellCurve.module.scss";
-import { BellCurveProps } from "./BellCurve.types";
+import { AnimatedChartState, BellCurveProps } from "./BellCurve.types";
 import {
   coordinatesGenerator,
   gaussian,

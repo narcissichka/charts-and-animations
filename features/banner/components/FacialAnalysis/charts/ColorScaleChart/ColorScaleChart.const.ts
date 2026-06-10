@@ -44,9 +44,6 @@ export const ANNOTATIONS: ScaleAnnotation[] = [
   { value: 92, label: "Deep", side: "left" },
 ];
 
-/** Match SCSS $lg breakpoint */
-export const LG_BREAKPOINT = "(min-width: 1024px)";
-
 export interface ColorScaleChartConfig {
   SCALE_WIDTH: number;
   SCALE_HEIGHT: number;

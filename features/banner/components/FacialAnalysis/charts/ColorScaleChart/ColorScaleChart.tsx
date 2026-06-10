@@ -7,7 +7,6 @@ import {
   ANNOTATIONS,
   COLOR_STOPS,
   LABEL,
-  LG_BREAKPOINT,
   MAX,
   MIN,
   SIDE_LABEL,
@@ -19,7 +18,8 @@ import { ColorScaleChartProps } from "./ColorScaleChart.types";
 import { ScaleLayer } from "./ScaleLayer/ScaleLayer";
 import styles from "./ColorScaleChart.module.scss";
 import useMediaQuery from "@/features/functional/hooks/useMediaQuery";
-import { useColorScaleChartAnimation } from "@/features/banner/hooks/charts/⁠useColorScaleChartAnimation";
+import { useColorScaleChartAnimation } from "@/features/banner/hooks/charts/useColorScaleChartAnimation";
+import { LG_BREAKPOINT } from "@/features/global/constants/breakpoints";
 
 const CHART_DATA = [{ x: 0, y: 0 }];
 const CHART_MARGIN = { top: 0, right: 0, bottom: 0, left: 0 };

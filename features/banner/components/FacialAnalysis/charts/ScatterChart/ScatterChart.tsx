@@ -17,7 +17,6 @@ import {
   CHART_MARGIN,
   COLS,
   HOVER_MARKERS,
-  LG_BREAKPOINT,
   MARKERS,
   ROWS,
   getScatterChartConfig,
@@ -34,6 +33,7 @@ import {
 import { AxisLabels } from "./AxisLabels/AxisLabels";
 import { Square } from "./Square/Square";
 import useMediaQuery from "@/features/functional/hooks/useMediaQuery";
+import { LG_BREAKPOINT } from "@/features/global/constants/breakpoints";
 
 export default function ScatterChartMatrix({
   cols = COLS,

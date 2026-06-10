@@ -13,7 +13,6 @@ import styles from "./SymmetryChart.module.scss";
 import {
   DEFAULT_LINE_COLOR,
   GRID_COLOR,
-  LG_BREAKPOINT,
   MAX,
   MIN,
   SCATTER_CHART_DATA,
@@ -28,6 +27,7 @@ import { getVerticalGridCoordinates } from "@/features/banner/utils/charts/symme
 import { ChipLabel } from "./ChipLabel/ChipLabel";
 import useMediaQuery from "@/features/functional/hooks/useMediaQuery";
 import { useSymmetryChartAnimation } from "@/features/banner/hooks/charts/⁠useSymmetryChartAnimation";
+import { LG_BREAKPOINT } from "@/features/global/constants/breakpoints";
 
 export default function SymmetryChart({
   min = MIN,

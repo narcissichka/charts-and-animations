@@ -15,7 +15,6 @@ import {
   DEFAULT_COLOR,
   DEFAULT_SEGMENTS,
   DEFAULT_VALUE_FORMATTER,
-  LG_BREAKPOINT,
   getFacialThirdsConfig,
 } from "./FacialThirdsChart.const";
 import { FacialThirdsChartProps } from "./FacialThirdsChart.types";
@@ -23,6 +22,7 @@ import { buildRow } from "@/features/banner/utils/charts/facialThirdsChart";
 import { TopLabel, ValueLabel } from "./Label/Label";
 import useMediaQuery from "@/features/functional/hooks/useMediaQuery";
 import { useFacialThirdsChartAnimation } from "@/features/banner/hooks/charts/useFacialThirdsChartAnimation";
+import { LG_BREAKPOINT } from "@/features/global/constants/breakpoints";
 
 export default function FacialThirdsChart({
   segments = DEFAULT_SEGMENTS,
