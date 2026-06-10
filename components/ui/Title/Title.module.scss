@@ -21,6 +21,7 @@
   }
 
   .p {
+    color: var(--color-text-primary);
     @include typography.heading-8-book;
   }
 }

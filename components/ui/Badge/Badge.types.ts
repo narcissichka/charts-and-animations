@@ -5,5 +5,5 @@ export enum BadgeVariant {
 
 export interface BadgeProps {
   text: string;
-  variant?: BadgeVariant;
+  className?: string;
 }

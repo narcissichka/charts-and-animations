@@ -2,9 +2,14 @@ import { InfoCard } from "./InfoCard/InfoCard";
 import { InfoListProps } from "./InfoList.types";
 import styles from "./InfoList.module.scss";
 
-export const InfoList = ({ items, showIndex, ...restProps }: InfoListProps) => {
+export const InfoList = ({
+  cols = 4,
+  items,
+  showIndex,
+  ...restProps
+}: InfoListProps) => {
   return (
-    <div className={styles.grid}>
+    <div style={{ "--columns-number": cols }} className={styles.grid}>
       {items.map((item, i) => {
         const { id, child, ...rest } = item;
         return (

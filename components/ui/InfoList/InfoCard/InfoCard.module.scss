@@ -8,6 +8,7 @@
   justify-content: space-between;
   border-radius: rem(12);
   border: 1px solid var(--color-border-primary-muted);
+  min-width: rem(277);
 
   &.sm {
     height: rem(152);
@@ -15,6 +16,11 @@
 
   &.md {
     height: rem(230);
+  }
+
+  :global(.dark) & {
+    background-color: #ffffff33;
+    backdrop-filter: blur(32px);
   }
 }
 

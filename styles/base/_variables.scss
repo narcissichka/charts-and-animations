@@ -4,7 +4,7 @@
   --color-bg-base: #ffffff;
   --color-border-base: #e8e8e880;
   --color-bg-base-with-opacity: #ffffff1a;
-  --color-border-primary-muted: #f2f2f2;
+  --color-border-primary-muted: oklch(96.115% 0.00011 271.152);
   --color-border-primary-muted-with-opacity: #c7d1d54d;
 
   --color-text-disabled: #9aaeb5;
@@ -35,8 +35,9 @@
 
 .dark {
   --color-border-primary-muted-with-opacity: #f2f2f21a;
+  --color-border-primary-muted: #f2f2f233;
   --color-text-primary: #ffffff;
   --color-text-secondary: #ffffff;
   --color-text-button-secondary-disabled: #ffffff;
-  --color-bg-base-with-opacity: transparent;
+  --color-bg-base-with-opacity: #ffffff1a;
 }

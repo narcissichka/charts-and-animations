@@ -9,12 +9,12 @@ type GridRowProps = {
 
 export const GridRow = ({ children, variant }: GridRowProps) => {
   return (
-    <div className={`${styles.row} ${variant}`}>
-      <div className={`${styles.cell} ${styles.side}`}></div>
-      <div className={`${styles.cell} ${styles.center} centerCell`}>
+    <div className={`${styles.row} ${variant} row`}>
+      <div className={`${styles.cell} ${styles.side} cell`}></div>
+      <div className={`${styles.cell} ${styles.center} cell centerCell`}>
         {children}
       </div>
-      <div className={`${styles.cell} ${styles.side}`}></div>
+      <div className={`${styles.cell} ${styles.side} cell`}></div>
     </div>
   );
 };

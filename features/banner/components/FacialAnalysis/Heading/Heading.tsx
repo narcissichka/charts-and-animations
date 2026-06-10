@@ -8,7 +8,7 @@ import styles from "./Heading.module.scss";
 export const Heading = () => {
   return (
     <div className={styles.wrapper}>
-      <Badge variant={BadgeVariant.Dark} text="Personalized aesthetics" />
+      <Badge className={`${BadgeVariant.Dark} transparent`} text="Personalized aesthetics" />
       <Title
         className={`${TitleVariant.Dark} ${TitlePosition.Center} ${TitleSize.Medium}`}
         title={

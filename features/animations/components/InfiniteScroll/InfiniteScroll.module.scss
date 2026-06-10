@@ -1,0 +1,32 @@
+.section {
+  --section-height: 200dvh;
+  --progress: 0;
+  --travel: 100dvh;
+
+  position: relative;
+  height: var(--section-height);
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  height: 100dvh;
+  overflow: hidden;
+}
+
+.background {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.track {
+  position: relative;
+  z-index: 1;
+  will-change: transform;
+  transform: translate3d(0, calc(var(--progress) * -1 * var(--travel)), 0);
+}
+
+.panel {
+  height: 100dvh;
+}

@@ -9,6 +9,7 @@ export interface InfoListItem {
 }
 
 export interface InfoListProps {
+  cols?: number;
   items: InfoListItem[];
   showIndex?: boolean;
   size?: InfoCardSize;
