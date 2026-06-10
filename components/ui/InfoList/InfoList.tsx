@@ -1,6 +1,7 @@
 import { InfoCard } from "./InfoCard/InfoCard";
 import { InfoListProps } from "./InfoList.types";
 import styles from "./InfoList.module.scss";
+import { CSSProperties } from "react";
 
 export const InfoList = ({
   cols = 4,
@@ -9,7 +10,7 @@ export const InfoList = ({
   ...restProps
 }: InfoListProps) => {
   return (
-    <div style={{ "--columns-number": cols }} className={styles.grid}>
+    <div style={{ "--columns-number": cols } as CSSProperties} className={styles.grid}>
       {items.map((item, i) => {
         const { id, child, ...rest } = item;
         return (
