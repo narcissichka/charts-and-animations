@@ -13,6 +13,7 @@ export default function Home() {
       <FacialAnalysis />
       <Spacer className="fullHeight" />
       <InsecurityBanner />
+      <Spacer className="fullHeight" />
     </main>
   );
 }

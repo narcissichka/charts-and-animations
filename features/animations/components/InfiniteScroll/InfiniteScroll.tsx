@@ -15,6 +15,7 @@ type InfiniteScrollProps = {
   background?: ReactNode;
   className?: string;
   sectionHeight?: string;
+  lastPanelExtraScroll?: number;
 };
 
 export const InfiniteScroll = ({
@@ -22,11 +23,14 @@ export const InfiniteScroll = ({
   background,
   className = "",
   sectionHeight,
+  lastPanelExtraScroll = 0,
 }: InfiniteScrollProps) => {
   const sectionRef = useRef<HTMLElement>(null);
   const items = useMemo(() => Children.toArray(children), [children]);
   const panelsCount = items.length;
-  const resolvedSectionHeight = sectionHeight ?? `${panelsCount * 100}dvh`;
+  const panelTransitionDvh = Math.max(panelsCount - 1, 0) * 100;
+  const totalScrollDvh = panelTransitionDvh + lastPanelExtraScroll;
+  const resolvedSectionHeight = sectionHeight ?? `${100 + totalScrollDvh}dvh`;
 
   useEffect(() => {
     const element = sectionRef.current;
@@ -42,7 +46,26 @@ export const InfiniteScroll = ({
       const passed = Math.min(Math.max(-rect.top, 0), scrollable);
       const progress = scrollable > 0 ? passed / scrollable : 0;
 
+      const panelProgress =
+        panelTransitionDvh > 0
+          ? Math.min((progress * totalScrollDvh) / panelTransitionDvh, 1)
+          : 1;
+
+      const subProgress =
+        lastPanelExtraScroll > 0
+          ? Math.min(
+              Math.max(
+                (progress * totalScrollDvh - panelTransitionDvh) /
+                  lastPanelExtraScroll,
+                0
+              ),
+              1
+            )
+          : 0;
+
       element.style.setProperty("--progress", `${progress}`);
+      element.style.setProperty("--panel-progress", `${panelProgress}`);
+      element.style.setProperty("--sub-progress", `${subProgress}`);
       frame = 0;
     };
 
@@ -64,7 +87,7 @@ export const InfiniteScroll = ({
       window.removeEventListener("scroll", onScroll);
       window.removeEventListener("resize", update);
     };
-  }, []);
+  }, [panelTransitionDvh, totalScrollDvh, lastPanelExtraScroll]);
 
   return (
     <section
@@ -74,7 +97,7 @@ export const InfiniteScroll = ({
         {
           "--section-height": resolvedSectionHeight,
           "--panels-count": panelsCount,
-          "--travel": `${Math.max(panelsCount - 1, 0) * 100}dvh`,
+          "--travel": `${panelTransitionDvh}dvh`,
         } as CSSProperties
       }
     >

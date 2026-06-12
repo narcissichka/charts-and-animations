@@ -6,6 +6,25 @@ $font-mono: "Zagma Mono", monospace;
 
 // Headings
 
+@mixin heading-3-book {
+  font-family: $font-primary;
+  font-weight: 400;
+  font-size: rem(24);
+  line-height: rem(28);
+
+  @include respond-to(md) {
+    letter-spacing: -1.5%;
+    font-size: rem(40);
+    line-height: rem(48);
+  }
+
+  @include respond-to(lg) {
+    letter-spacing: -2%;
+    font-size: rem(56);
+    line-height: rem(64);
+  }
+}
+
 @mixin heading-4-book {
   font-family: $font-primary;
   font-weight: 400;
@@ -21,6 +40,20 @@ $font-mono: "Zagma Mono", monospace;
   @include respond-to(lg) {
     font-size: rem(48);
     line-height: rem(56);
+  }
+}
+
+@mixin heading-6-regular {
+  font-family: $font-primary;
+  font-weight: 400;
+  font-size: rem(24);
+  line-height: rem(28);
+  letter-spacing: 0;
+
+  @include respond-to(md) {
+    font-size: rem(32);
+    line-height: rem(35);
+    letter-spacing: -1.5%;
   }
 }
 
@@ -74,9 +107,14 @@ $font-mono: "Zagma Mono", monospace;
 @mixin body-3-regular {
   font-family: $font-primary;
   font-weight: 400;
-  font-size: rem(14);
-  line-height: rem(20);
+  font-size: rem(12);
+  line-height: rem(16);
   letter-spacing: 0;
+
+  @include respond-to(md) {
+    font-size: rem(14);
+    line-height: rem(20);
+  }
 }
 
 @mixin body-4-zagma-book {

@@ -1,0 +1,48 @@
+@use "../../../../../styles/abstract/functions" as *;
+@use "../../../../../styles/base/typography" as typography;
+
+.filterSvg {
+  position: absolute;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+
+.card {
+  min-width: rem(443);
+
+  // Light tint so the warped backdrop stays visible (overrides InfoCard's veil).
+  --card-bg: rgba(255, 255, 255, 0.1);
+
+  // Displace first, then blur (handled inside the SVG filter) so the warp shows.
+  --card-backdrop-filter: url(#glass-warp);
+
+  // The scroll animation MUST live on this element (the one with backdrop-filter),
+  // not on an ancestor. transform / opacity / will-change on an ancestor make it a
+  // "backdrop root", which isolates the card so backdrop-filter has nothing behind
+  // it to sample (no blur, no warp). On the filtered element itself it's fine.
+  // --scroll and --cards-out are inherited from .cardsContainer.
+  transform: translateY(calc((1 - var(--scroll, 0.5) * 2) * 100dvh));
+  opacity: calc(1 - var(--cards-out, 0));
+  will-change: transform, opacity;
+
+  :global(.heading) {
+    @include typography.heading-6-regular;
+  }
+}
+
+.list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: rem(8);
+}
+
+.listItem {
+  border-radius: rem(6);
+  color: var(--color-text-primary);
+  width: 100%;
+  padding: rem(12);
+  background-color: var(--color-bg-base-with-opacity);
+  @include typography.body-3-regular;
+}

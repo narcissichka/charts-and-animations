@@ -4,7 +4,7 @@
   --color-bg-base: #ffffff;
   --color-border-base: #e8e8e880;
   --color-bg-base-with-opacity: #ffffff1a;
-  --color-border-primary-muted: oklch(96.115% 0.00011 271.152);
+  --color-border-primary-muted: #f2f2f2;
   --color-border-primary-muted-with-opacity: #c7d1d54d;
 
   --color-text-disabled: #9aaeb5;
@@ -31,6 +31,8 @@
   --color-chart-caption-bg: #f2f5f533;
   --color-chart-pill-bg: #ffffff26;
   --color-chart-text: #233137;
+
+  --color-blur-bg: #00000066;
 }
 
 .dark {

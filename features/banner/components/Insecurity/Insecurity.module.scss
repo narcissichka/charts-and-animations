@@ -27,9 +27,65 @@
 
     :global(.centerCell) {
       display: flex;
-      flex-direction: column;
       justify-content: space-between;
       padding: rem(40);
+      position: relative;
     }
   }
+}
+
+.gridFirst {
+  :global(.main) {
+    :global(.centerCell) {
+      flex-direction: column;
+    }
+  }
+}
+
+.cardsContainer {
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+
+  // NOTE: the scroll transform/opacity are applied to each card (.card in
+  // InsecurityCard.module.scss), NOT here. Putting transform / opacity /
+  // will-change on this wrapper makes it a backdrop root and isolates the
+  // cards, which kills their backdrop-filter glass-warp effect. These custom
+  // properties are only declared here and inherit down to the cards.
+
+  // Normalized scroll position for the cards: 0 when they start entering,
+  // 1 when they have fully scrolled past. Start knob = 0.15.
+  //   scroll 0   → +100dvh (below the viewport, hidden)
+  //   scroll 0.5 →    0    (centered, fully readable)
+  //   scroll 1   → -100dvh (above the viewport, hidden)
+  --scroll: clamp(0, calc((var(--sub-progress, 0) - 0.25) / 0.85), 1);
+
+  // Soft fade as they leave through the top. Fade-out start knob = 0.85.
+  --cards-out: clamp(0, calc((var(--sub-progress, 0) - 0.75) / 0.15), 1);
+}
+
+.cardItem {
+  &:first-of-type {
+    align-self: start;
+  }
+
+  &:last-of-type {
+    align-self: end;
+  }
+}
+
+.absoluteText {
+  position: absolute;
+  inset: 0;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  pointer-events: none;
+  z-index: 1;
+  --title-in: clamp(0, calc((var(--sub-progress, 0) - 0.05) / 0.2), 1);
+  --title-out: clamp(0, calc((var(--sub-progress, 0) - 0.6) / 0.25), 1);
+  opacity: calc(var(--title-in) * (1 - var(--title-out)));
 }

@@ -18,9 +18,13 @@
     height: rem(230);
   }
 
+  &.lg {
+    height: rem(400);
+  }
+
   :global(.dark) & {
-    background-color: #ffffff33;
-    backdrop-filter: blur(32px);
+    background-color: var(--card-bg, #ffffff33);
+    backdrop-filter: var(--card-backdrop-filter, blur(32px));
   }
 }
 

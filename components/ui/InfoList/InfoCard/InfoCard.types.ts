@@ -4,6 +4,7 @@ import { ResponsiveImageProps } from "../../ResponsiveImage/ResponsiveImage.type
 export enum InfoCardSize {
   Small = "sm",
   Medium = "md",
+  Large = "lg",
 }
 
 export interface InfoCardProps {
