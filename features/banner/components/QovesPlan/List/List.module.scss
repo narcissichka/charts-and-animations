@@ -2,12 +2,6 @@
 
 $hover-transition-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-.title {
-  :global(.heading) {
-    white-space: pre-line;
-  }
-}
-
 .card {
   transition:
     background-color 0.1s $hover-transition-function,

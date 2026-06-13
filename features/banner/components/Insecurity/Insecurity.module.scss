@@ -41,6 +41,22 @@
       flex-direction: column;
     }
   }
+
+  :global(.cell:not(.centerCell)) {
+    display: none;
+
+    @include respond-to(md) {
+      display: block;
+    }
+  }
+
+  :global(.centerCell) {
+    grid-column: 1/-1;
+
+    @include respond-to(md) {
+      grid-column: unset;
+    }
+  }
 }
 
 .cardsContainer {

@@ -1,0 +1,7 @@
+@use "../../../../../styles/abstract/functions" as *;
+
+.title {
+    :global(.subtitle) {
+        max-width: rem(467);
+    }
+}

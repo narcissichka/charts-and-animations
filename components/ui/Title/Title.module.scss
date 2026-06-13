@@ -6,6 +6,10 @@
   flex-direction: column;
   gap: rem(16);
 
+  :global(.heading) {
+    white-space: pre-line;
+  }
+
   &:global(.center) {
     align-items: center;
     text-align: center;

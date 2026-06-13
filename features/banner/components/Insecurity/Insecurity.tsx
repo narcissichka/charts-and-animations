@@ -42,7 +42,7 @@ export const InsecurityBanner = () => {
                 titleTag={TitleTag.H3}
                 title={
                   <>
-                    Is it vain to care{" "}
+                    Is it vain to care{"\n"}
                     <HighlightText>about your appearance?</HighlightText>
                   </>
                 }

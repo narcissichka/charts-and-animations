@@ -7,7 +7,7 @@ import styles from "./List.module.scss";
 const ListTitle = ({ title }: { title: string }) => {
   return (
     <Title
-      className={`${TitleSize.Small} ${TitlePosition.Left} ${styles.title}`}
+      className={`${TitleSize.Small} ${TitlePosition.Left}`}
       titleTag={TitleTag.P}
       title={title}
     />
