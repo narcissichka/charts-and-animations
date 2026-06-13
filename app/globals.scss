@@ -10,10 +10,6 @@ body {
   @include type.body-2-book;
 }
 
-.fullHeight {
-  height: 100dvh;
-}
-
 .fullWidthMobile {
   width: 100vw;
   margin-inline: calc(50% - 50vw);

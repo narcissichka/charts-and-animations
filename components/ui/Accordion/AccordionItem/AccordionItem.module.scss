@@ -1,0 +1,104 @@
+@use "../../../../styles/abstract/functions" as *;
+
+.item {
+  border-bottom: 1px solid var(--color-border-primary-muted);
+}
+
+.heading {
+  margin: 0;
+  font: inherit;
+}
+
+.trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: rem(16);
+  width: 100%;
+  padding: rem(22) rem(20);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  color: var(--color-text-primary);
+  font-size: rem(18);
+  line-height: 1.4;
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background-color: var(--color-bg-primary-hover);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-text-primary);
+    outline-offset: -2px;
+  }
+}
+
+.label {
+  flex: 1;
+}
+
+// Plus icon drawn from two bars; the vertical bar fades out to form a minus.
+.icon {
+  position: relative;
+  flex-shrink: 0;
+  width: rem(20);
+  height: rem(20);
+  color: var(--color-text-primary);
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: currentColor;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+
+  &::before {
+    width: rem(14);
+    height: rem(2);
+    transform: translate(-50%, -50%);
+  }
+
+  &::after {
+    width: rem(2);
+    height: rem(14);
+    transform: translate(-50%, -50%);
+  }
+}
+
+// Collapsible region: animate 0fr -> 1fr so height transitions smoothly.
+.panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease;
+}
+
+.panelInner {
+  overflow: hidden;
+}
+
+// Direct-child combinators keep a nested item's open state from styling its
+// ancestors (the recursion renders an Accordion inside `.panelInner`).
+.open {
+  > .heading .icon::after {
+    transform: translate(-50%, -50%) rotate(90deg);
+    opacity: 0;
+  }
+
+  > .panel {
+    grid-template-rows: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .trigger,
+  .icon::before,
+  .icon::after,
+  .panel {
+    transition: none;
+  }
+}

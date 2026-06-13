@@ -1,0 +1,15 @@
+@use "../../../styles/abstract/functions" as *;
+
+.accordion {
+  width: 100%;
+}
+
+// A nested accordion is inset slightly so the hierarchy reads visually.
+.nested {
+  padding-left: rem(20);
+}
+
+.content {
+  padding: 0 rem(20) rem(24);
+  color: var(--color-text-secondary);
+}

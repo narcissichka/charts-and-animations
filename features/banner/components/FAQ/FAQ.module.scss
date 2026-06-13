@@ -1,0 +1,9 @@
+@use "../../../../styles/abstract/media" as *;
+
+.hideOnMobile {
+    display: none;
+
+    @include respond-to(lg) {
+        display: block;
+    }
+}
