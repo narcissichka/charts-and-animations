@@ -11,7 +11,7 @@
 
 .row {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: rem(16) minmax(0, 1fr) rem(16);
   background-color: var(--color-border-primary-muted);
   gap: rem(1);
 }
@@ -26,17 +26,7 @@
 }
 
 .side {
-  display: none;
-}
-
-@include respond-to(md) {
-  .row {
-    grid-template-columns: rem(16) minmax(0, 1fr) rem(16);
-  }
-
-  .side {
-    display: block;
-  }
+  display: block;
 }
 
 @include respond-to(lg) {

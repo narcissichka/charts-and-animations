@@ -1,4 +1,5 @@
 @use "../../../../styles/abstract/functions" as *;
+@use "../../../../styles/abstract/media" as *;
 @use "../../../../styles/base/typography" as typography;
 
 .card {
@@ -19,7 +20,13 @@
   }
 
   &.lg {
-    height: rem(400);
+    min-width: rem(275);
+    height: rem(320);
+
+    @include respond-to(md) {
+      height: rem(400);
+      width: rem(443);
+    }
   }
 
   :global(.dark) & {

@@ -34,7 +34,7 @@ export const InsecurityBanner = () => {
           className={styles.grid}
           main={
             <>
-              <div className={styles.cardsContainer}>
+              <div className={`${styles.cardsContainer} fullWidthMobile`}>
                 <InsecurityCardWrapper insecurityCardsData={insecurityCardsData(styles.cardItem)} />
               </div>
               <Title

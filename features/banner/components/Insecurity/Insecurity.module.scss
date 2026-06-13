@@ -1,4 +1,5 @@
 @use "../../../../styles/abstract/functions" as *;
+@use "../../../../styles/abstract/media" as *;
 
 .grid {
   background-color: transparent;
@@ -46,9 +47,16 @@
   display: flex;
   justify-content: space-between;
   align-self: center;
-  width: 100%;
-  height: 100%;
+  height: calc(100% + rem(80));
   z-index: 2;
+  overflow-y: hidden;
+  gap: rem(16);
+  padding-inline: rem(32);
+
+  @include respond-to(lg) {
+    width: 100%;
+    padding-inline: 0;
+  }
 
   // NOTE: the scroll transform/opacity are applied to each card (.card in
   // InsecurityCard.module.scss), NOT here. Putting transform / opacity /
@@ -68,12 +76,14 @@
 }
 
 .cardItem {
-  &:first-of-type {
-    align-self: start;
-  }
+  @include respond-to(lg) {
+    &:first-of-type {
+      align-self: start;
+    }
 
-  &:last-of-type {
-    align-self: end;
+    &:last-of-type {
+      align-self: end;
+    }
   }
 }
 

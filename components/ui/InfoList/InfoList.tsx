@@ -10,7 +10,7 @@ export const InfoList = ({
   ...restProps
 }: InfoListProps) => {
   return (
-    <div style={{ "--columns-number": cols } as CSSProperties} className={styles.grid}>
+    <div style={{ "--columns-number": cols } as CSSProperties} className={`${styles.grid} fullWidthMobile`}>
       {items.map((item, i) => {
         const { id, child, ...rest } = item;
         return (

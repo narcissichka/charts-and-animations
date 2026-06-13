@@ -2,6 +2,8 @@
 @use "../styles/base/reset";
 @use "../styles/base/typography" as type;
 @use "../styles/base/variables";
+@use "../styles/abstract/media" as *;
+@use "../styles/abstract/functions" as *;
 
 body {
   background: var(--color-bg-base);
@@ -11,4 +13,18 @@ body {
 
 .fullHeight {
   height: 100dvh;
+}
+
+.fullWidthMobile {
+  width: 100vw;
+  margin-inline: calc(50% - 50vw);
+  overflow-x: scroll;
+  padding-inline: rem(16);
+
+  @include respond-to(lg) {
+    width: unset;
+    margin: unset;
+    overflow: auto;
+    padding-inline: 0;
+  }
 }
