@@ -1,9 +1,46 @@
 @use "../../../../styles/abstract/media" as *;
+@use "../../../../styles/abstract/functions" as *;
 
 .hideOnMobile {
-    display: none;
+  display: none;
+
+  @include respond-to(lg) {
+    display: block;
+  }
+}
+
+.accordion {
+  max-width: rem(1064);
+  margin-inline: auto;
+  margin-bottom: rem(40);
+}
+
+.grid {
+  :global(.main .centerCell) {
+    padding: rem(8) rem(8) 0;
 
     @include respond-to(lg) {
-        display: block;
+      padding-bottom: rem(8);
     }
+
+    @include respond-to(lg) {
+      padding: 0;
+    }
+  }
+
+  :global(.cell:not(.centerCell)) {
+    display: none;
+
+    @include respond-to(md) {
+      display: block;
+    }
+  }
+
+  :global(.centerCell) {
+    grid-column: 1/-1;
+
+    @include respond-to(md) {
+      grid-column: unset;
+    }
+  }
 }

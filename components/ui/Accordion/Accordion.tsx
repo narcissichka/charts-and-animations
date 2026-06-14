@@ -32,7 +32,7 @@ export const Accordion = ({
   const nestedLevel = Math.min(headingLevel + 1, 6) as AccordionHeadingLevel;
 
   return (
-    <div className={`${styles.accordion} ${className}`}>
+    <div className={`${styles.accordion} ${className} accordion`}>
       {items.map(({ id, label, content, items: nestedItems }) => (
         <AccordionItem
           key={id}
@@ -44,7 +44,7 @@ export const Accordion = ({
         >
           {nestedItems ? (
             <Accordion
-              className={styles.nested}
+              className={`${styles.nested} nested`}
               items={nestedItems}
               allowMultiple={allowMultiple}
               headingLevel={nestedLevel}

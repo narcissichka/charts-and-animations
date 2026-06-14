@@ -6,11 +6,11 @@ export interface GridProps {
   main: ReactNode;
   bottom?: ReactNode;
   decoration?: ReactNode;
-};
+}
 
 export enum GridRowVariant {
-    Top = "top",
-    Main = "main",
-    Bottom = "bottom",
-    Decoration = "decoration"
+  Top = "top",
+  Main = "main",
+  Bottom = "bottom",
+  Decoration = "decoration",
 }

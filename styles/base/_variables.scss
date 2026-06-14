@@ -33,6 +33,17 @@
   --color-chart-text: #233137;
 
   --color-blur-bg: #00000066;
+  --color-icon-secondary: #758084;
+
+  --background-banner-gradient:
+    linear-gradient(
+      180deg,
+      transparent 0%,
+      rgba(60, 70, 78, 0.25) 60%,
+      rgba(40, 48, 55, 0.55) 100%
+    ),
+    radial-gradient(ellipse 60% 50% at 50% 30%, #9b8b85, transparent 70%),
+    linear-gradient(120deg, #a8b3bb 0%, #9099a1 50%, #b4bcc2 100%);
 }
 
 .dark {

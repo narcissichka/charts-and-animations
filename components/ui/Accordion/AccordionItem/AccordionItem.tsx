@@ -16,7 +16,7 @@ export const AccordionItem = ({
 
   return (
     <div
-      className={`${styles.item} ${isOpen ? styles.open : ""} ${className}`}
+      className={`${styles.item} item ${isOpen ? `${styles.open} open` : ""} ${className}`}
     >
       {createElement(
         `h${headingLevel}`,
@@ -24,14 +24,14 @@ export const AccordionItem = ({
         <button
           type="button"
           id={triggerId}
-          className={styles.trigger}
+          className={`${styles.trigger} trigger`}
           aria-expanded={isOpen}
           aria-controls={panelId}
           onClick={onToggle}
         >
           <span className={styles.label}>{label}</span>
           <span className={styles.icon} aria-hidden="true" />
-        </button>
+        </button>,
       )}
 
       <div

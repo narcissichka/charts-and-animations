@@ -8,11 +8,12 @@ import { accordionItems } from "./FAQ.const";
 export const FAQ = () => {
   return (
     <GridBanner
+      className={styles.grid}
       top={<Spacer className={styles.hideOnMobile} />}
       main={
         <>
           <Heading />
-          <Accordion items={accordionItems} />
+          <Accordion className={styles.accordion} items={accordionItems} />
         </>
       }
       bottom={<Spacer className={styles.hideOnMobile} />}

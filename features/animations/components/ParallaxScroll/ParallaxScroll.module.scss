@@ -40,15 +40,7 @@
 
 .layerBg {
   inset: 0;
-  background:
-    linear-gradient(
-      180deg,
-      transparent 0%,
-      rgba(60, 70, 78, 0.25) 60%,
-      rgba(40, 48, 55, 0.55) 100%
-    ),
-    radial-gradient(ellipse 60% 50% at 50% 30%, #9b8b85, transparent 70%),
-    linear-gradient(120deg, #a8b3bb 0%, #9099a1 50%, #b4bcc2 100%);
+  background: var(--background-banner-gradient);
   z-index: 1;
   pointer-events: none;
 }

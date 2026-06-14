@@ -1,12 +1,36 @@
 @use "../../../../styles/abstract/functions" as *;
+@use "../../../../styles/base/typography" as typography;
 
 .item {
-  border-bottom: 1px solid var(--color-border-primary-muted);
+  &:not(:last-of-type) {
+    border-bottom: 1px solid var(--color-border-primary-muted);
+  }
+
+  &:first-of-type {
+    .trigger {
+      border-top-left-radius: rem(8);
+      border-top-right-radius: rem(8);
+    }
+  }
+
+  &:last-of-type {
+    .trigger {
+      border-bottom-left-radius: rem(8);
+      border-bottom-right-radius: rem(8);
+    }
+  }
 }
 
 .heading {
   margin: 0;
-  font: inherit;
+}
+
+h3.heading {
+  @include typography.heading-8-medium;
+}
+
+h4.heading {
+  @include typography.body-2-medium;
 }
 
 .trigger {
@@ -15,18 +39,19 @@
   justify-content: space-between;
   gap: rem(16);
   width: 100%;
-  padding: rem(22) rem(20);
+  padding: rem(16);
   background: transparent;
   border: none;
   cursor: pointer;
   text-align: left;
-  color: var(--color-text-primary);
   font-size: rem(18);
   line-height: 1.4;
   transition: background-color 0.2s ease;
+  color: inherit;
+  -webkit-tap-highlight-color: transparent;
 
-  &:hover {
-    background-color: var(--color-bg-primary-hover);
+  :global(.nested) & {
+    padding: rem(12);
   }
 
   &:focus-visible {
@@ -43,9 +68,9 @@
 .icon {
   position: relative;
   flex-shrink: 0;
-  width: rem(20);
-  height: rem(20);
-  color: var(--color-text-primary);
+  width: rem(16);
+  height: rem(16);
+  color: var(--color-icon-secondary);
 
   &::before,
   &::after {
@@ -54,18 +79,20 @@
     top: 50%;
     left: 50%;
     background-color: currentColor;
-    transition: transform 0.2s ease, opacity 0.2s ease;
+    transition:
+      transform 0.2s ease,
+      opacity 0.2s ease;
   }
 
   &::before {
-    width: rem(14);
-    height: rem(2);
+    width: rem(9);
+    height: rem(1);
     transform: translate(-50%, -50%);
   }
 
   &::after {
-    width: rem(2);
-    height: rem(14);
+    width: rem(1);
+    height: rem(9);
     transform: translate(-50%, -50%);
   }
 }
@@ -84,13 +111,57 @@
 // Direct-child combinators keep a nested item's open state from styling its
 // ancestors (the recursion renders an Accordion inside `.panelInner`).
 .open {
-  > .heading .icon::after {
-    transform: translate(-50%, -50%) rotate(90deg);
-    opacity: 0;
+  background: var(--background-banner-gradient);
+  color: var(--color-text-button-primary);
+  border-radius: rem(8);
+
+  :global(.accordion) & {
+    > .heading .icon::after,
+    > .heading .icon::before {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+  }
+
+  .icon {
+    color: inherit;
+  }
+
+  :global(.nested) & {
+    > .heading .icon::after {
+      transform: translate(-50%, -50%) rotate(90deg);
+      opacity: 0;
+    }
+
+    > .heading .icon::before {
+      transform: translate(-50%, -50%);
+    }
   }
 
   > .panel {
     grid-template-rows: 1fr;
+  }
+
+  // Suppress hover highlight so the open gradient stays visually static.
+  .heading {
+    .trigger {
+      background-color: inherit;
+
+      &:hover {
+        background-color: transparent;
+      }
+    }
+  }
+
+  .item {
+    border-color: var(--color-bg-base-with-opacity);
+  }
+
+  .open {
+    background: var(--color-bg-primary-hover);
+
+    .trigger {
+      border-radius: rem(8);
+    }
   }
 }
 

@@ -1,15 +1,30 @@
 @use "../../../styles/abstract/functions" as *;
+@use "../../../styles/base/typography" as typography;
 
 .accordion {
   width: 100%;
+  padding: rem(8);
+  background: var(--color-primary-50);
+  border-radius: rem(8);
+  overflow: hidden;
+
+  :global(.trigger) {
+    &:hover {
+      background: var(--color-primary-100);
+    }
+  }
 }
 
-// A nested accordion is inset slightly so the hierarchy reads visually.
 .nested {
-  padding-left: rem(20);
+  background: var(--color-bg-primary-hover) !important;
+  backdrop-filter: blur(rem(10));
+  margin: 0 rem(8) rem(8);
+  width: auto;
 }
 
 .content {
-  padding: 0 rem(20) rem(24);
-  color: var(--color-text-secondary);
+  padding: 0 rem(12) rem(12);
+  color: inherit;
+  @include typography.body-3-regular;
+  font-size: rem(14);
 }
